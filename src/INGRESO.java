@@ -17,7 +17,7 @@ import java.util.Objects;
 public class INGRESO extends JFrame implements ActionListener{
     private JButton botón_de_ingreso ;
     private JTextField textField_nombre_de_usuario, textField_clave ;
-    private JLabel label_nombre_de_usuario, label_clave, label_bienvenida, label_mensaje; //Es posible agregar más.
+    private JLabel label_nombre_de_usuario, label_clave, label_bienvenida, label_mensaje, label_marca; //Es posible agregar más.
     public static String ingreso_nombre_usuario = "";
     public static String ingreso_clave = "";
 
@@ -25,18 +25,24 @@ public class INGRESO extends JFrame implements ActionListener{
         setLayout(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("Bienvenido");
-        getContentPane().setBackground(new Color(0,0,0));
+        getContentPane().setBackground(new Color(255,0,0));
         ImageIcon imagen = new ImageIcon("images/e861ed4728dbd52f3c44ad3b488d0e64.jpg");
 
+        label_nombre_de_usuario = new JLabel("Nombre de usuario");
+        label_nombre_de_usuario.setBounds(180,180,300,30);
+        label_nombre_de_usuario.setFont(new Font("Andale Mono", 3, 18));
+        label_nombre_de_usuario.setForeground(new Color(255,255,255));
+        add(label_nombre_de_usuario);
+
         textField_nombre_de_usuario = new JTextField();
-        textField_nombre_de_usuario.setBounds(45,240,255,25);
+        textField_nombre_de_usuario.setBounds(140,210,255,25);
         textField_nombre_de_usuario.setBackground(new Color(224,224,224));
         textField_nombre_de_usuario.setFont(new Font("Andale Mono", 1, 14));
         textField_nombre_de_usuario.setForeground(new Color(0,0,0));
         add(textField_nombre_de_usuario);
 
         botón_de_ingreso = new JButton("Ingresar");
-        botón_de_ingreso.setBounds(125,280,100,30);
+        botón_de_ingreso.setBounds(210,280,100,30);
         botón_de_ingreso.setBackground(new Color(255,255,255));
         botón_de_ingreso.setFont(new Font("Andale Mono", 1, 14));
         botón_de_ingreso.setForeground(new Color(0,0,0));
@@ -53,7 +59,7 @@ public class INGRESO extends JFrame implements ActionListener{
 
     public static void main(String args[]) {
         INGRESO ingreso = new INGRESO();
-        ingreso.setBounds(0,0,350,450);
+        ingreso.setBounds(0,0,525,580);
         ingreso.setVisible(true);
         ingreso.setResizable(false);
         ingreso.setLocationRelativeTo(null);
@@ -66,11 +72,7 @@ public class INGRESO extends JFrame implements ActionListener{
         marca.setBounds(25,15,300,150);
         add(marca);
 
-        SCV = new JLabel("Sistema de Control Vacacional");
-        SCV.setBounds(35,135,300,30);
-        SCV.setFont(new Font("Andale Mono", 3, 18));
-        SCV.setForeground(new Color(255,255,255));
-        add(SCV);
+
 
         orden = new JLabel("Ingrese su nombre");
         orden.setBounds(45,212,200,30);
