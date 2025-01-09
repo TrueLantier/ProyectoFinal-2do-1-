@@ -12,7 +12,6 @@
 import javax.swing.* ;
 import java.awt.event.* ;
 import java.awt.* ;
-import java.util.Objects;
 
 public class INGRESO extends JFrame implements ActionListener{
     private JButton botón_de_ingreso ;
@@ -26,10 +25,7 @@ public class INGRESO extends JFrame implements ActionListener{
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("Bienvenido");
         getContentPane().setBackground(new Color(0,0,0));
-        //FondoPanel1 fondoPanel1 = new FondoPanel1("images/43afa1ac52bc59c4b6dafb83af771a9b.jpg");
-
-        setIconImage(new ImageIcon(getClass().getResource("images/43afa1ac52bc59c4b6dafb83af771a9b.jpg")).getImage());
-        //Esto no funciona.
+        setIconImage(new ImageIcon(getClass().getResource("images/43afa1ac52bc59c4b6dafb83af771a9b.jpg")).getImage());//Esto no funciona.
         ImageIcon imagen1 = new ImageIcon("images/i01_43afa1ac52bc59c4b6dafb83af771a9b (1).jpg");
         ImageIcon imagen2 = new ImageIcon("images/i01_b83c04fffb72eaf853faaba65f079737.jpg");
         ImageIcon imagen3 = new ImageIcon("images/i01_1cf97d5618f49a8cc73062e777f3945d.jpg");
@@ -45,11 +41,11 @@ public class INGRESO extends JFrame implements ActionListener{
         add(label_marca1);
 
         label_marca2 = new JLabel(imagen2);
-        label_marca2.setBounds(320,400,160,160);
+        label_marca2.setBounds(320,390,160,160);
         add(label_marca2);
 
         label_marca3 = new JLabel(imagen3);
-        label_marca3.setBounds(40,400,160,160);
+        label_marca3.setBounds(40,390,160,160);
         add(label_marca3);
 
         label_nombre_de_usuario = new JLabel("Nombre de usuario");
@@ -86,6 +82,11 @@ public class INGRESO extends JFrame implements ActionListener{
         botón_de_ingreso.addActionListener(this);
         add(botón_de_ingreso);
 
+        label_mensaje = new JLabel("Si no tienes ganas de entrenar, entrena sin ganas.");
+        label_mensaje.setBounds(40,553,460,22);
+        label_mensaje.setFont(new Font("Andale Mono", 3, 18));
+        label_mensaje.setForeground(new Color(255,0,0));
+        add(label_mensaje);
     }
 
     public void actionPerformed( ActionEvent evento){
@@ -104,25 +105,6 @@ public class INGRESO extends JFrame implements ActionListener{
 }
 
 /*
-    public ProyectoFinal1() {
-        marca = new JLabel(imagen);
-
-
-
-
-        orden = new JLabel("Ingrese su nombre");
-        orden.setBounds(45,212,200,30);
-        orden.setFont(new Font("Andale Mono", 1, 12));
-        orden.setForeground(new Color(255,255,255));
-        add(orden);
-
-        TCCC = new JLabel("©2017 The Coca-Cola Company");
-        TCCC.setBounds(85,375,300,30);
-        TCCC.setFont(new Font("Andale Mono", 1, 12));
-        TCCC.setForeground(new Color(255,255,255));
-        add(TCCC);
-    }
-
     ingreso_nombre = nombre_de_usuario.getText().trim();
             if (ingreso_nombre.equals("")){
                 JOptionPane.showMessageDialog(null, "Debes ingresar tu nombre");
