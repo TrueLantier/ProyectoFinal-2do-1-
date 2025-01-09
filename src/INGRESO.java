@@ -25,37 +25,39 @@ public class INGRESO extends JFrame implements ActionListener{
         setLayout(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("Bienvenido");
-        getContentPane().setBackground(new Color(255,0,0));
+        getContentPane().setBackground(new Color(0,0,0));
+        //FondoPanel1 fondoPanel1 = new FondoPanel1("images/43afa1ac52bc59c4b6dafb83af771a9b.jpg");
+
         setIconImage(new ImageIcon(getClass().getResource("images/43afa1ac52bc59c4b6dafb83af771a9b.jpg")).getImage());
         //Esto no funciona.
-        ImageIcon imagen1 = new ImageIcon("images/9dfc095719f53fd37e77dd96e3ee61bf.jpg");
+        ImageIcon imagen1 = new ImageIcon("images/i01_43afa1ac52bc59c4b6dafb83af771a9b (1).jpg");
         ImageIcon imagen2 = new ImageIcon("images/e96e428d214d93a6b02e4a54d9f15d43.jpg");
 
         label_bienvenida = new JLabel("Bienvenido al gimnasio GymMaster");
         label_bienvenida.setBounds(120,10,320,30);
         label_bienvenida.setFont(new Font("Andale Mono", 3, 18));
-        label_bienvenida.setForeground(new Color(255,255,255));
+        label_bienvenida.setForeground(new Color(255,0,0));
         add(label_bienvenida);
 
         label_marca1 = new JLabel(imagen1);
-        label_marca1.setBounds(210,105,200,200);
+        label_marca1.setBounds(110,40,320,160);
         add(label_marca1);
 
         label_nombre_de_usuario = new JLabel("Nombre de usuario");
-        label_nombre_de_usuario.setBounds(180,180,300,30);
+        label_nombre_de_usuario.setBounds(180,380,300,30);
         label_nombre_de_usuario.setFont(new Font("Andale Mono", 3, 18));
-        label_nombre_de_usuario.setForeground(new Color(255,255,255));
+        label_nombre_de_usuario.setForeground(new Color(255,0,0));
         add(label_nombre_de_usuario);
 
         textField_nombre_de_usuario = new JTextField();
-        textField_nombre_de_usuario.setBounds(140,210,255,25);
-        textField_nombre_de_usuario.setBackground(new Color(224,224,224));
+        textField_nombre_de_usuario.setBounds(140,410,255,25);
+        textField_nombre_de_usuario.setBackground(new Color(255,255,255));
         textField_nombre_de_usuario.setFont(new Font("Andale Mono", 1, 14));
         textField_nombre_de_usuario.setForeground(new Color(0,0,0));
         add(textField_nombre_de_usuario);
 
         botón_de_ingreso = new JButton("Ingresar");
-        botón_de_ingreso.setBounds(210,280,100,30);
+        botón_de_ingreso.setBounds(210,480,100,30);
         botón_de_ingreso.setBackground(new Color(255,255,255));
         botón_de_ingreso.setFont(new Font("Andale Mono", 1, 14));
         botón_de_ingreso.setForeground(new Color(0,0,0));
