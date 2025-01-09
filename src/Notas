@@ -10,7 +10,7 @@ El sistema también debe permitir agregar, eliminar o modificar usuarios y clase
 
 La aplicación debe permitir al banco realizar las siguientes operaciones: //¿Es al banco o a los administradores?
     1. Buscar y mostrar los detalles de un usuario dado su ID.
-    2. Obtenga el instructor y el horario de las clases más populares.
+    2. Obtenga el instructor y el horario de las clases más populares. //¿Horario más popular?
     3. Mostrar los usuarios que han asistido a menos de tres clases en un mes específico.
     4. Listar las clases:
         a. Por nombre.
@@ -23,10 +23,12 @@ La aplicación debe permitir al banco realizar las siguientes operaciones: //¿E
 //¿Hay un solo entrenador por clase?
 //¿Con las clases se refiere a los planes de entrenamiento? Los planes deben querer decir un conjunto de clases.
 //Aclarar sobre lo de planes y clases.
+//¿Recuperarse de un archivo binario?
 
 1-Se trabajará de lunes a viernes.
-2-Dividir primeramente según el tipo de usuario a ingresar(administrador o usuario normal) y luego ir a opciones de usuario o clases.
+2-Dividir primeramente según el tipo de usuario a ingresar(administrador, instructor o usuario normal) y luego ir a opciones de usuario o clases.
 3-Después de esto, la tercera interfaz.
 4-Usuario: ID, nombre, tipo de plan, historial de asistencia.
 5-Clases: código, instructor, cupo máximo, cantidad de inscritos.
-6-Clases disponibles: entrenamiento de fuerza, crossfit, yoga, Tai Chi, hipertrofia, aeróbico,
+6-Clases disponibles: entrenamiento de fuerza, crossfit, yoga, Tai Chi, hipertrofia, aeróbico.
+7-Criterios para ordenar clases: más populares, menos populares, por nombre, por instructor.
