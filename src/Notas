@@ -4,16 +4,29 @@ Notas sobre el proyecto final del primer semestre de segundo año.
 Un gimnasio necesita un sistema para gestionar sus usuarios y clases.
 Cada usuario tiene un ID, nombre, tipo de plan y un historial de asistencia.
 Las clases tienen un código, nombre, instructor, cupo máximo y cantidad de inscritos.
-Se necesita permitir a los administradores usuarios, obtener las clases más populares, identificar usuarios con baja asistencia, y listar las clases ordenadas por diferentes criterios.
-El sistema también debe permitir agregar, eliminar o modificar usuarios y clases. recuperarse de un archivo binario.
+Se necesita permitir a los administradores usuarios, obtener las clases más populares, identificar usuarios con baja asistencia,
+y listar las clases ordenadas por diferentes criterios.
+El sistema también debe permitir agregar, eliminar o modificar usuarios y clases. Recuperarse de un archivo binario.
 
-La aplicación debe permitir al banco realizar las siguientes operaciones:
+La aplicación debe permitir al banco realizar las siguientes operaciones: //¿Es al banco o a los administradores?
     1. Buscar y mostrar los detalles de un usuario dado su ID.
     2. Obtenga el instructor y el horario de las clases más populares.
-    3. Mostrar los usuarios que han ayudado a menos de tres clases en un mes específico.
+    3. Mostrar los usuarios que han asistido a menos de tres clases en un mes específico.
     4. Listar las clases:
         a. Por nombre.
         b. Por instructor.
     5. Añadir, eliminar y modificar usuarios y clases.
     6. Guarde los datos de asistencia en un archivo binario.
     7. Leer los datos del archivo binario y mostrarlos en una tabla.
+
+//¿El programa debe darle opciones a un usuario normal? Quiero darle opciones al usuario para que vea su plan y otros datos.
+//¿Hay un solo entrenador por clase?
+//¿Con las clases se refiere a los planes de entrenamiento? Los planes deben querer decir un conjunto de clases.
+//Aclarar sobre lo de planes y clases.
+
+1-Se trabajará de lunes a viernes.
+2-Dividir primeramente según el tipo de usuario a ingresar(administrador o usuario normal) y luego ir a opciones de usuario o clases.
+3-Después de esto, la tercera interfaz.
+4-Usuario: ID, nombre, tipo de plan, historial de asistencia.
+5-Clases: código, instructor, cupo máximo, cantidad de inscritos.
+6-Clases disponibles: entrenamiento de fuerza, crossfit, yoga, Tai Chi, hipertrofia, aeróbico,
