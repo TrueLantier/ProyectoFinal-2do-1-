@@ -17,7 +17,7 @@ import java.util.Objects;
 public class INGRESO extends JFrame implements ActionListener{
     private JButton botón_de_ingreso ;
     private JTextField textField_nombre_de_usuario, textField_clave ;
-    private JLabel label_nombre_de_usuario, label_clave, label_bienvenida, label_mensaje, label_marca; //Es posible agregar más.
+    private JLabel label_nombre_de_usuario, label_clave, label_bienvenida, label_mensaje, label_marca1, label_marca2;
     public static String ingreso_nombre_usuario = "";
     public static String ingreso_clave = "";
 
@@ -26,7 +26,20 @@ public class INGRESO extends JFrame implements ActionListener{
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("Bienvenido");
         getContentPane().setBackground(new Color(255,0,0));
-        ImageIcon imagen = new ImageIcon("images/e861ed4728dbd52f3c44ad3b488d0e64.jpg");
+        setIconImage(new ImageIcon(getClass().getResource("images/43afa1ac52bc59c4b6dafb83af771a9b.jpg")).getImage());
+        //Esto no funciona.
+        ImageIcon imagen1 = new ImageIcon("images/9dfc095719f53fd37e77dd96e3ee61bf.jpg");
+        ImageIcon imagen2 = new ImageIcon("images/e96e428d214d93a6b02e4a54d9f15d43.jpg");
+
+        label_bienvenida = new JLabel("Bienvenido al gimnasio GymMaster");
+        label_bienvenida.setBounds(120,10,320,30);
+        label_bienvenida.setFont(new Font("Andale Mono", 3, 18));
+        label_bienvenida.setForeground(new Color(255,255,255));
+        add(label_bienvenida);
+
+        label_marca1 = new JLabel(imagen1);
+        label_marca1.setBounds(210,105,200,200);
+        add(label_marca1);
 
         label_nombre_de_usuario = new JLabel("Nombre de usuario");
         label_nombre_de_usuario.setBounds(180,180,300,30);
@@ -69,8 +82,7 @@ public class INGRESO extends JFrame implements ActionListener{
 /*
     public ProyectoFinal1() {
         marca = new JLabel(imagen);
-        marca.setBounds(25,15,300,150);
-        add(marca);
+
 
 
 
