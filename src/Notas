@@ -26,7 +26,8 @@ La aplicación debe permitir al banco realizar las siguientes operaciones: //¿E
 //¿Recuperarse de un archivo binario?
 
 1-Se trabajará de lunes a viernes.
-2-Dividir primeramente según el tipo de usuario a ingresar(administrador, instructor o usuario normal) y luego ir a opciones de usuario o clases.
+2-Dividir primeramente según el tipo de usuario a ingresar(administrador, instructor o usuario normal) y
+luego ir a opciones de usuario o clases.
 3-Después de esto, la tercera interfaz.
 4-Usuario: ID, nombre, tipo de plan, historial de asistencia.
 5-Clases: código, instructor, cupo máximo, cantidad de inscritos.
