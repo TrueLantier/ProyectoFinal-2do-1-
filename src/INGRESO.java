@@ -7,6 +7,7 @@
  * Campo de texto para escribir clave de administrador o instructor.
  * Botón que permita pasar a la siguiente pantalla.
  * Al pie, algún tipo de mensaje.
+ * Falta ver cómo introducir un nuevo usuario.
   */
 
 import javax.swing.* ;
@@ -19,6 +20,7 @@ public class INGRESO extends JFrame implements ActionListener{
     private JLabel label_nombre_de_usuario, label_clave, label_bienvenida, label_mensaje, label_marca1, label_marca2, label_marca3;
     public static String ingreso_nombre_usuario = "";
     public static String ingreso_clave = "";
+
 
     public INGRESO(){
         setLayout(null);
@@ -49,33 +51,33 @@ public class INGRESO extends JFrame implements ActionListener{
         add(label_marca3);
 
         label_nombre_de_usuario = new JLabel("Nombre de usuario");
-        label_nombre_de_usuario.setBounds(180,210,300,30);
+        label_nombre_de_usuario.setBounds(180,200,300,30);
         label_nombre_de_usuario.setFont(new Font("Andale Mono", 3, 18));
         label_nombre_de_usuario.setForeground(new Color(255,0,0));
         add(label_nombre_de_usuario);
 
         textField_nombre_de_usuario = new JTextField();
-        textField_nombre_de_usuario.setBounds(140,240,255,25);
+        textField_nombre_de_usuario.setBounds(140,230,255,25);
         textField_nombre_de_usuario.setBackground(new Color(255,255,255));
         textField_nombre_de_usuario.setFont(new Font("Andale Mono", 1, 14));
         textField_nombre_de_usuario.setForeground(new Color(255,0,0));
         add(textField_nombre_de_usuario);
 
         label_clave = new JLabel("Clave");
-        label_clave.setBounds(240,280,300,30);
+        label_clave.setBounds(240,270,300,30);
         label_clave.setFont(new Font("Andale Mono", 3, 18));
         label_clave.setForeground(new Color(255,0,0));
         add(label_clave);
 
         textField_clave = new JTextField();
-        textField_clave.setBounds(140,310,255,25);
+        textField_clave.setBounds(140,300,255,25);
         textField_clave.setBackground(new Color(255,255,255));
         textField_clave.setFont(new Font("Andale Mono", 1, 14));
         textField_clave.setForeground(new Color(255,0,0));
         add(textField_clave);
 
         botón_de_ingreso = new JButton("Ingresar");
-        botón_de_ingreso.setBounds(210,350,100,30);
+        botón_de_ingreso.setBounds(210,340,100,30);
         botón_de_ingreso.setBackground(new Color(255,255,255));
         botón_de_ingreso.setFont(new Font("Andale Mono", 1, 14));
         botón_de_ingreso.setForeground(new Color(0,0,0));
@@ -91,8 +93,15 @@ public class INGRESO extends JFrame implements ActionListener{
 
     public void actionPerformed( ActionEvent evento){
         if (evento.getSource() == botón_de_ingreso) {
-
+            ingreso_nombre_usuario = textField_nombre_de_usuario.getText().trim();
+            ingreso_clave = textField_clave.getText().toUpperCase();
+            if (ingreso_nombre_usuario.equals("")){
+                JOptionPane.showMessageDialog(null, "Debes ingresar tu nombre");
+                } else if (ingreso_clave.equals("ADM5678")) {
+                JOptionPane.showMessageDialog(null, "Bienvenido Administrador " +
+                        ingreso_nombre_usuario);// Esto cambiará.
             }
+        }
     }
 
     public static void main(String args[]) {
@@ -103,18 +112,3 @@ public class INGRESO extends JFrame implements ActionListener{
         ingreso.setLocationRelativeTo(null);
     }
 }
-
-/*
-    ingreso_nombre = nombre_de_usuario.getText().trim();
-            if (ingreso_nombre.equals("")){
-                JOptionPane.showMessageDialog(null, "Debes ingresar tu nombre");
-            } else {
-                ProyectoFinal2 proyectoFinal2 = new ProyectoFinal2();
-                proyectoFinal2.setBounds(0,0,660,360);
-                proyectoFinal2.setVisible(true);
-                proyectoFinal2.setResizable(false);
-                proyectoFinal2.setLocationRelativeTo(null);
-                this.setVisible(false);
-                }
-}
- */

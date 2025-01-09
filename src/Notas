@@ -20,6 +20,7 @@ La aplicación debe permitir al banco realizar las siguientes operaciones: //¿E
     7. Leer los datos del archivo binario y mostrarlos en una tabla.
 
 //¿El programa debe darle opciones a un usuario normal? Quiero darle opciones al usuario para que vea su plan y otros datos.
+//¿Debería poner otra parte para nuevos usuarios?
 //¿Hay un solo entrenador por clase?
 //¿Con las clases se refiere a los planes de entrenamiento? Los planes deben querer decir un conjunto de clases.
 //Aclarar sobre lo de planes y clases.
